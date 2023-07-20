@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scroll Animation</title>
+
+
+  <style>
+
+@import url("https://fonts.googleapis.com/css?family=Russo+One&amp;display=swap");
+.space {
+  background-color: #1f2740;
+  text-align: center;
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  animation: space-fade-out 2s linear 3s 1 forwards;
+}
+.space svg {
+  height: 300px;
+  width: 300px;
+  top: 30%;
+  left: 35%;
+  margin-top: 30vh;
+  clip-path: circle(at center);
+  border: 4px solid #f8f3dc;
+  border-radius: 50%;
+  animation: rocketShake 0.1s linear alternate infinite;
+}
+.space svg .st0 {
+  fill: #13192d;
+}
+.space svg .st1 {
+  transform: translateY(-100%);
+  animation: starsMove 4s infinite;
+}
+.space svg .st1:nth-of-type(5) {
+  animation-delay: 0.5s;
+  animation-duration: 8s;
+}
+.space svg .st1:nth-of-type(4) {
+  animation-duration: 3s;
+}
+.space svg .st1:nth-of-type(3) {
+  animation-delay: 0.2s;
+  animation-duration: 6s;
+}
+.space svg .st1:nth-of-type(2) {
+  animation-delay: 1s;
+}
+.space svg .st1,
+.space svg .st3 {
+  fill: #f8f3dc;
+}
+.space svg .st3 {
+  stroke: #13192d;
+  stroke-width: 4;
+  stroke-miterlimit: 10;
+}
+.space svg .st4 {
+  fill: #69b3b2;
+  transform: scale(0);
+  opacity: 0;
+  animation: smoke 2s infinite;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+.space svg .st4:nth-child(9) {
+  animation-delay: 0.5s;
+  animation-duration: 1.5s;
+}
+.space svg .rocket {
+  animation: rocketMove 3s linear 0.5 forwards;
+}
+
+@keyframes space-fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes starsMove {
+  to {
+    transform: translateY(100%);
+  }
+}
+@keyframes smoke {
+  30% {
+    transform: scale(2);
+    opacity: 1;
+  }
+  31% {
+    opacity: 0.5;
+  }
+}
+@keyframes rocketShake {
+  from {
+    transform: rotate(-0.5deg);
+  }
+  to {
+    transform: rotate(0.5deg);
+  }
+}
+@keyframes rocketMove {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-10%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+  80% {
+    transform: translateY(2%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i');
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	font-family: 'Lato', sans-serif;
+	font-size: 14px;
+	color: #999999;
+	word-wrap:break-word;
+}
+
+p
+{
+	margin: 0 0 10px;
+}
+
+ul
+{
+	list-style: none;
+}
+
+.container {
+	width: 100%;
+	margin: auto;
+	font-weight: 900;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 0 0 200px;
+}
+
+/*.take-input {
+  margin: 50px 0 0;
+}
+
+.take-input input {
+  width: 400px;
+  height: 35px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: 1px solid #ececec;
+  margin: 0 15px 0 0;
+  font-size: 15px;
+}*/
+
+a, a:link, a:visited {
+  text-decoration: none;
+  padding: 9px 15px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  color: gray;
+}
+
+.animate_opening_page {
+	font-size: 50px;
+	margin: 100px 0 0;
+	/* border-bottom: 2px solid #ccc; */
+}
+
+.animate_opening_page span {
+	display: inline-block;
+}
+
+a.repeat {
+  display: inline-block;
+  font-size: 12px;
+  text-transform: none;
+  text-decoration: none;
+  color: orange;
+  padding: 5px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  font-weight: normal;
+  margin: 0 0 0 50px;
+  border-radius: 3px;
+  position: relative;
+  bottom: 15px;
+}
+
+a.repeat:hover {
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+}
+
+.animate_opening_page span:nth-of-type(2) {
+	animation-delay: .05s;
+}
+.animate_opening_page span:nth-of-type(3) {
+	animation-delay: .1s;
+}
+.animate_opening_page span:nth-of-type(4) {
+	animation-delay: .15s;
+}
+.animate_opening_page span:nth-of-type(5) {
+	animation-delay: .2s;
+}
+.animate_opening_page span:nth-of-type(6) {
+	animation-delay: .25s;
+}
+.animate_opening_page span:nth-of-type(7) {
+	animation-delay: .3s;
+}
+.animate_opening_page span:nth-of-type(8) {
+	animation-delay: .35s;
+}
+.animate_opening_page span:nth-of-type(9) {
+	animation-delay: .4s;
+}
+.animate_opening_page span:nth-of-type(10) {
+	animation-delay: .45s;
+}
+.animate_opening_page span:nth-of-type(11) {
+	animation-delay: .5s;
+}
+.animate_opening_page span:nth-of-type(12) {
+	animation-delay: .55s;
+}
+.animate_opening_page span:nth-of-type(13) {
+	animation-delay: .6s;
+}
+.animate_opening_page span:nth-of-type(14) {
+	animation-delay: .65s;
+}
+.animate_opening_page span:nth-of-type(15) {
+	animation-delay: .7s;
+}
+.animate_opening_page span:nth-of-type(16) {
+	animation-delay: .75s;
+}
+.animate_opening_page span:nth-of-type(17) {
+	animation-delay: .8s;
+}
+.animate_opening_page span:nth-of-type(18) {
+	animation-delay: .85s;
+}
+.animate_opening_page span:nth-of-type(19) {
+	animation-delay: .9s;
+}
+.animate_opening_page span:nth-of-type(20) {
+	animation-delay: .95s;
+}
+
+
+/* Animation One */
+
+.one span {
+	color: #24a8e6;
+	opacity: 0;
+	transform: translate(-150px, -50px) rotate(-180deg) scale(3);
+	animation: revolveScale .4s forwards;
+}
+
+@keyframes revolveScale {
+	60% {
+		transform: translate(20px, 20px) rotate(30deg) scale(.3);
+	}
+
+	100% {
+		transform: translate(0) rotate(0) scale(1);
+		opacity: 1;
+	}
+}
+
+
+/* Animation Two */
+
+.two span {
+	color: #a5cb21;
+	opacity: 0;
+	transform: translate(200px, -100px) scale(2);
+	animation: ballDrop .3s forwards;
+}
+
+@keyframes ballDrop {
+	60% {
+		transform: translate(0, 20px) rotate(-180deg) scale(.5);
+	}
+
+	100% {
+		transform: translate(0) rotate(0deg) scale(1);
+		opacity: 1;
+	}
+}
+
+
+/* Animation Three */
+
+
+.three span {
+	color: #b10e81;
+	opacity: 0;
+	transform: translate(-300px, 0) scale(0);
+	animation: sideSlide 1.5s forwards;
+}
+
+@keyframes sideSlide {
+	60% {
+		transform: translate(20px, 0) scale(1);
+		color: #b10e81;
+	}
+
+	80% {
+		transform: translate(20px, 0) scale(1);
+		color: #b10e81;
+	}
+
+	99% {
+		transform: translate(0) scale(1.2);
+		color: #00f0ff;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+		color: #b10e81;
+	}
+}
+
+
+/* Animation Four */
+
+
+.four span {
+	color: #8d6a00;
+	opacity: 0;
+	transform: translate(0, -100px) rotate(360deg) scale(0);
+	animation: revolveDrop .3s forwards;
+}
+
+
+@keyframes revolveDrop {
+	30% {
+		transform: translate(0, -50px) rotate(180deg) scale(1);
+	}
+
+	60% {
+		transform: translate(0, 20px) scale(.8) rotate(0deg);
+	}
+
+	100% {
+		transform: translate(0) scale(1) rotate(0deg);
+		opacity: 1;
+	}
+}
+
+
+/* Animation Five */
+
+
+.five span {
+	color: #dd3f0f;
+	opacity: 0;
+	transform: translate(0, -100px) rotate(360deg) scale(0);
+	animation: dropVanish .5s forwards;
+}
+
+
+@keyframes dropVanish {
+	30% {
+		transform: translate(0, -50px) rotate(180deg) scale(1);
+	}
+
+	50% {
+		transform: translate(0, 20px) scale(.8) rotate(0deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: translate(-100px, -100px) scale(1.5) rotate(-180deg);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0) scale(1) rotate(0deg);
+		opacity: 1;
+	}
+}
+
+
+
+/* Animation Six */
+
+
+.six span {
+	color: #ddb40f;
+	opacity: 0;
+	transform: rotate(-180deg) translate(150px, 0);
+	animation: twister .5s forwards;
+}
+
+
+@keyframes twister {
+	10% {
+		opacity: 1;
+	}
+	100% {
+		transform: rotate(0deg) translate(0);
+		opacity: 1;
+	}
+}
+
+
+
+/* Animation Seven */
+
+
+.seven span {
+	color: #348c04;
+	opacity: 0;
+	transform: translate(-150px, 0) scale(.3);
+	animation: leftRight .5s forwards;
+}
+
+
+@keyframes leftRight {
+	40% {
+		transform: translate(50px, 0) scale(.7);
+		opacity: 1;
+		color: #348c04;
+	}
+
+	60% {
+		color: #0f40ba;
+	}
+
+	80% {
+		transform: translate(0) scale(2);
+		opacity: 0;
+	}
+
+	100% {
+		transform: translate(0) scale(1);
+		opacity: 1;
+	}
+}
+
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+
+
+
+  <main>
+    <h5>Hello World!</h5>
+  </main>
+
+  
+  <div id="opening-animation" class="space">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650.6 650.6">
+          <circle class="st0" cx="325.3" cy="325.3" r="323.3"></circle>
+          <path class="st1" d="M96.9 274.5l6.1 11.1 11.2 6.1-11.2 6.2-6.1 11.1-6.1-11.1-11.2-6.2 11.2-6.1z"></path>
+          <circle class="st1" cx="141.7" cy="473.6" r="5.7"></circle>
+          <circle class="st1" cx="213.7" cy="143.7" r="5.7"></circle>
+          <circle class="st1" cx="474.3" cy="133.9" r="5.7"></circle>
+          <circle class="st1" cx="544.1" cy="279.8" r="5.7"></circle>
+          <circle class="st1" cx="510.7" cy="468" r="5.7"></circle>
+          <g class="rocket">
+              <path d="M325.3 62s110.9 201.8 19.3 405l-9.6 25.7h-19.3l-9.6-25.7c-91.7-203.1 19.2-405 19.2-405z" fill="#fa3757" stroke="#13192d" stroke-width="4" stroke-miterlimit="10"></path>
+              <path class="st3" d="M344.5 467.1l-9.6 25.7h-19.2l-9.6-25.7c12.2 2.8 25.1 2.6 38.4 0zM359.2 149.6c-15.6-53.8-34-87.6-34-87.6s-18.3 33.5-33.8 86.9c19.5 6.6 42.8 5.5 67.8.7zM277.1 375s50.5 6.8 96.3 0l-3.7 17.6s-44.5 5.4-88.9 0l-3.7-17.6zM282.8 400.3s45.6 5.8 84.9 0l-4.3 15.1s-38.1 4.6-76.3 0l-4.3-15.1z"></path>
+              <path class="st3" d="M328.1 478.7c0 60.6-1.3 109.7-2.8 109.7-1.6 0-2.8-49.1-2.8-109.7s1.3-126 2.8-126c1.5.1 2.8 65.4 2.8 126zM247.6 343.7s-23.1 96.4-2.2 226.1c0 0 10.4-126.6 45.8-140.7 0 0-7.1-24.2-10.1-35.2 0 .1-36.2-8-33.5-50.2zM402.9 343.7s23.1 96.4 2.2 226.1c0 0-10.4-126.6-45.8-140.7 0 0 7.1-24.2 10.1-35.2 0 .1 36.2-8 33.5-50.2z"></path>
+              <g>
+                  <circle class="st0" cx="325.3" cy="313.8" r="14.9"></circle>
+                  <circle class="st0" cx="325.3" cy="260.4" r="14.9"></circle>
+              </g>
+          </g>
+          <circle class="st4" cx="360.9" cy="550.9" r="15.5"></circle>
+          <circle class="st4" cx="287.8" cy="594.8" r="26.9"></circle>
+      </svg>
+
+
+ 
+
+
+<div class="container">
+		<div class="animate_opening_page three">
+			<span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
+			<span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+<br>
+
+      <span>c</span><span>s</span><span>s</span><span>3</span> &nbsp;
+			<span>a</span><span>n</span><span>i</span><span>m</span><span>a</span><span>t</span><span>i</span><span>o</span><span>n</span><span>s</span>
+   
+		</div>
+
+ 
+	</div>
+  </div>
+
+
+
+
+ 
+
+
+
+
+
+
+    <script>
+              $(document).on('click', () => {
+                $('#opening-animation').fadeOut(2000);
+                $(document).off('click');
+            });
+            setTimeout(() => $('#opening-animation').remove(), 5500);
+    </script>
+
+
+<script>
+  /* This code is not required for the animation. This is only needed for the repeatation */
+
+$(function(){
+	$('.repeat').click(function(){
+    	var classes =  $(this).parent().attr('class');
+        $(this).parent().attr('class', 'animate_opening_page');
+        var indicator = $(this);
+        setTimeout(function(){ 
+        	$(indicator).parent().addClass(classes);
+        }, 20);
+    });
+});
+</script>
+ 
+
+
+ 
+</body>
+</html>

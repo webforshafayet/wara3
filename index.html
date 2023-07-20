@@ -1,0 +1,3304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Wara Ventures</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">   
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/opening_animation.css" rel="stylesheet">
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+ 
+
+
+
+    <style>
+        *,
+*:before,
+*:after {
+  box-sizing: border-box;
+  outline: none;
+}
+
+ 
+figure.image-block {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* width: 375px;
+  min-width: 375px; */
+  height: 667px;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow: hidden;
+}
+figure.image-block:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+figure.image-block:hover h1 {
+  opacity: 0;
+  transform: scale(0.7);
+}
+figure.image-block:hover img {
+  transform: scale(1.25);
+}
+figure.image-block:hover figcaption {
+  bottom: 0;
+}
+figure.image-block h1 {
+  position: absolute;
+  top: 150px;
+  left: 20px;
+  margin: 0;
+  padding: 0;
+  color: white;
+  font-size: 60px;
+  font-weight: 100;
+  line-height: 1;
+  opacity: 1;
+  transform: scale(1);
+  transition: 0.25s ease;
+  z-index: 999;
+}
+figure.image-block img {
+  height: 100%;
+  transition: 0.25s;
+}
+figure.image-block figcaption {
+  position: absolute;
+  bottom: -54%;
+  left: 0;
+  width: 100%;
+  margin: 0;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  color: #777777;
+  line-height: 1;
+  transition: 0.25s;
+}
+figure.image-block figcaption h3 {
+  margin: 0 0 20px;
+  padding: 0;
+}
+figure.image-block figcaption p {
+  font-size: 14px;
+  line-height: 1.75;
+}
+figure.image-block figcaption button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px 0 0;
+  padding: 10px 30px;
+  background-color: #ff6600;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+body {
+  
+  /* display: flex; */
+  align-items: center;
+  justify-content: center;
+ 
+ 
+  line-height: 1.5;
+  height: 100vh;
+}
+
+.c-shutter {
+  --fill: forwards;
+  --message: "";
+  font-size: 3rem;
+  color: var(--color-foreground);
+  line-height: 1.5;
+  flex-direction: row;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  list-style: none;
+  user-select: none;
+  z-index: 99999999;
+}
+.c-shutter__slat {
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  background-color: var(--color-foreground);
+  animation-name: var(--animation);
+  animation-duration: 1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: var(--fill);
+  animation-play-state: var(--state);
+  animation-direction: var(--direction);
+}
+.c-shutter__slat:nth-child(1) {
+  animation-delay: calc(1 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(1):before {
+  margin-left: calc(0 * -10vw);
+}
+.c-shutter__slat:nth-child(2) {
+  animation-delay: calc(2 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(2):before {
+  margin-left: calc(1 * -10vw);
+}
+.c-shutter__slat:nth-child(3) {
+  animation-delay: calc(3 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(3):before {
+  margin-left: calc(2 * -10vw);
+}
+.c-shutter__slat:nth-child(4) {
+  animation-delay: calc(4 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(4):before {
+  margin-left: calc(3 * -10vw);
+}
+.c-shutter__slat:nth-child(5) {
+  animation-delay: calc(5 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(5):before {
+  margin-left: calc(4 * -10vw);
+}
+.c-shutter__slat:nth-child(6) {
+  animation-delay: calc(6 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(6):before {
+  margin-left: calc(5 * -10vw);
+}
+.c-shutter__slat:nth-child(7) {
+  animation-delay: calc(7 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(7):before {
+  margin-left: calc(6 * -10vw);
+}
+.c-shutter__slat:nth-child(8) {
+  animation-delay: calc(8 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(8):before {
+  margin-left: calc(7 * -10vw);
+}
+.c-shutter__slat:nth-child(9) {
+  animation-delay: calc(9 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(9):before {
+  margin-left: calc(8 * -10vw);
+}
+.c-shutter__slat:nth-child(10) {
+  animation-delay: calc(10 / var(--delay) * 1s);
+}
+.c-shutter__slat:nth-child(10):before {
+  margin-left: calc(9 * -10vw);
+}
+.c-shutter__slat:before {
+  content: var(--message);
+  color: var(--color-background);
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.c-shutter--opened:not(.c-shutter--closing) {
+  display: none;
+}
+.c-shutter--opened .c-shutter__slat {
+  height: 0%;
+}
+.c-shutter--closed {
+  display: flex;
+}
+.c-shutter--opening {
+  --animation: shutterOpening;
+}
+.c-shutter--closing {
+  --animation: shutterClosing;
+}
+
+@keyframes shutterOpening {
+  0% {
+    height: 100%;
+  }
+  100% {
+    height: 0;
+  }
+}
+@keyframes shutterClosing {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+.c-demo {
+  position: fixed;
+  cursor: pointer;
+  /* font-family: "Red Hat Display", Arial, sans-serif; */
+  font-size: 1rem;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  bottom: 1rem;
+  left: 50%;
+  transform: translatex(-50%);
+  padding: 1rem 2rem;
+  border-radius: 0.25rem;
+  border: none;
+  transition: opacity 0.5s ease-in-out, outline 0.5s ease-in-out;
+}
+.c-demo:before {
+  content: "Open";
+}
+
+.c-shutter--opened ~ .c-demo {
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
+.c-shutter--opened ~ .c-demo:before {
+  content: "Close";
+}
+
+.c-shutter--opening ~ .c-demo,
+.c-shutter--closing ~ .c-demo,
+.c-demo:disabled {
+  pointer-events: none;
+  opacity: 0;
+}
+.c-shutter--opening ~ .c-demo:before,
+.c-shutter--closing ~ .c-demo:before,
+.c-demo:disabled:before {
+  content: "Running...";
+}
+.c-shutter--opening ~ .c-demo:focus,
+.c-shutter--closing ~ .c-demo:focus,
+.c-demo:disabled:focus {
+  outline: none;
+}
+
+
+
+
+
+ 
+
+#str {
+ 
+  
+   height: auto;
+   /* font-family: sans-serif; */
+  
+ 
+   color: #fff;
+   font-weight: bold;
+ 
+}
+
+
+
+
+
+h1.text_wrapper{
+        font-size: 80px;
+        font-weight: 800;
+        /* font-family: "Montserrat", sans-serif; */
+        letter-spacing: 0.5px;
+        -webkit-text-stroke: 1px #fff;
+        text-transform: uppercase;
+    }
+    .text_wrapper span {
+        color: transparent;
+        transition: all 0.5s ease-in-out;
+    }
+    .text_wrapper span.active {
+        color: #fff;
+    }
+
+
+
+
+    .ml2 {
+  font-weight: 900;
+  font-size: 3.5em;
+}
+
+.ml2 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+
+.ml1 {
+  font-weight: 900;
+  font-size: 3.5em;
+
+
+  padding-bottom:100px;
+}
+
+.ml1 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+.ml1 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.1em;
+  padding-right: 0.05em;
+  padding-bottom: 0.15em;
+}
+
+.ml1 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+  transform-origin: 0 0;
+}
+
+.ml1 .line1 { top: 0; }
+.ml1 .line2 { bottom: 0; }
+
+
+
+
+
+
+
+
+
+
+.ml5 {
+  position: relative;
+  font-weight: 300 !important;
+  font-size: 3.5em !important;
+  color: #ffffff;
+}
+
+.ml5 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  line-height: 1em;
+}
+
+.ml5 .line {
+  position: absolute;
+  left: 10;
+  top: 10;
+  bottom: 10;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+
+  background-color: #ffffff;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .line4 {
+  position: absolute;
+  left: 10;
+  top: 10;
+  bottom: 10;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+
+  background-color: #ffffff;
+  transform-origin: 0.5 0;
+}
+
+
+
+.ml5 .line6 {
+  position: absolute;
+  left: 10;
+  top: 10;
+  bottom: 10;
+  margin: auto;
+  height: 3px;
+  width: 100%;
+
+  background-color: #ffffff;
+  transform-origin: 0.5 0;
+}
+
+.ml5 .ampersand {
+  /* font-family: Baskerville, serif; */
+  font-style: italic;
+  font-weight: 400;
+  width: 1em;
+  margin-right: -0.1em;
+  margin-left: -0.1em;
+}
+
+.ml5 .letters {
+  display: inline-block;
+  opacity: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+h5.ml8 {
+  color: #ff6600;
+}
+
+ 
+ 
+
+
+
+
+
+
+.ml9 {
+  position: relative;
+  /* font-weight: 200; */
+  
+}
+
+.ml9 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  padding-top: 0.2em;
+  padding-right: 0.05em;
+  padding-bottom: 0.1em;
+  overflow: hidden;
+}
+
+.ml9 .letter {
+  transform-origin: 50% 100%;
+  display: inline-block;
+  /* line-height: 1em; */
+}
+
+
+
+
+
+
+
+ 
+
+.ml11 .text-wrapper {
+  position: relative;
+  display: inline-block;
+  
+}
+
+.ml11 .line {
+  opacity: 0;
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #fff;
+  transform-origin: 0 50%;
+}
+
+.ml11 .line1 { 
+  top: 0; 
+  left: 0;
+}
+
+.ml11 .letter {
+  display: inline-block;
+  line-height: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* book */
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+ 
+
+ 
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #777777;
+  text-decoration: none;
+}
+
+.btnn {
+  display: inline-block;
+  text-transform: uppercase;
+  border: 2px solid #777777;
+  margin-top: 100px;
+  font-size: 0.7em;
+  font-weight: 700;
+  padding: 0.1em 0.4em;
+  text-align: center;
+  -webkit-transition: color 0.3s, border-color 0.3s;
+  -moz-transition: color 0.3s, border-color 0.3s;
+  transition: color 0.3s, border-color 0.3s;
+}
+
+.btnn:hover {
+  border-color: #ff6600;
+  color: #ff6600;
+}
+
+/* basic grid, only for this demo */
+.align {
+  clear: both;
+  margin: 90px auto 20px;
+  width: 100%;
+  max-width: 1170px;
+  text-align: center;
+}
+
+.align > li {
+  width: 500px;
+  min-height: 300px;
+  display: inline-block;
+  margin: 30px 20px 30px 30px;
+  padding: 0 0 0 60px;
+  vertical-align: top;
+}
+
+ 
+.book {
+  position: relative;
+  width: 160px;
+  height: 220px;
+  -webkit-perspective: 1000px;
+  -moz-perspective: 1000px;
+  perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+/*
+	2. background & color
+*/
+/* HARDCOVER FRONT */
+.hardcover_front li:first-child {
+  background-color: #eee;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* reverse */
+.hardcover_front li:last-child {
+  background: #fffbec;
+}
+
+/* HARDCOVER BACK */
+.hardcover_back li:first-child {
+  background: #fffbec;
+}
+
+/* reverse */
+.hardcover_back li:last-child {
+  background: #fffbec;
+}
+
+.book_spine li:first-child {
+  background: #eee;
+}
+
+.book_spine li:last-child {
+  background: #333;
+}
+
+/* thickness of cover */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+  background: #999;
+}
+
+/* page */
+.page > li {
+  background: -webkit-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+  background: -moz-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+  background: -ms-linear-gradient(left, #e1ddd8 0%, #fffbf6 100%);
+  background: linear-gradient(to right, #e1ddd8 0%, #fffbf6 100%);
+  box-shadow: inset 0px -1px 2px rgba(50, 50, 50, 0.1), inset -1px 0px 1px rgba(150, 150, 150, 0.2);
+  border-radius: 0px 5px 5px 0px;
+}
+
+/*
+	3. opening cover, back cover and pages
+*/
+.hardcover_front {
+  -webkit-transform: rotateY(-34deg) translateZ(8px);
+  -moz-transform: rotateY(-34deg) translateZ(8px);
+  transform: rotateY(-34deg) translateZ(8px);
+  z-index: 100;
+}
+
+.hardcover_back {
+  -webkit-transform: rotateY(-15deg) translateZ(-8px);
+  -moz-transform: rotateY(-15deg) translateZ(-8px);
+  transform: rotateY(-15deg) translateZ(-8px);
+}
+
+.page li:nth-child(1) {
+  -webkit-transform: rotateY(-28deg);
+  -moz-transform: rotateY(-28deg);
+  transform: rotateY(-28deg);
+}
+
+.page li:nth-child(2) {
+  -webkit-transform: rotateY(-30deg);
+  -moz-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+}
+
+.page li:nth-child(3) {
+  -webkit-transform: rotateY(-32deg);
+  -moz-transform: rotateY(-32deg);
+  transform: rotateY(-32deg);
+}
+
+.page li:nth-child(4) {
+  -webkit-transform: rotateY(-34deg);
+  -moz-transform: rotateY(-34deg);
+  transform: rotateY(-34deg);
+}
+
+.page li:nth-child(5) {
+  -webkit-transform: rotateY(-36deg);
+  -moz-transform: rotateY(-36deg);
+  transform: rotateY(-36deg);
+}
+
+/*
+	4. position, transform & transition
+*/
+.hardcover_front,
+.hardcover_back,
+.book_spine,
+.hardcover_front li,
+.hardcover_back li,
+.book_spine li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.hardcover_front,
+.hardcover_back {
+  -webkit-transform-origin: 0% 100%;
+  -moz-transform-origin: 0% 100%;
+  transform-origin: 0% 100%;
+}
+
+.hardcover_front {
+  -webkit-transition: all 0.8s ease, z-index 0.6s;
+  -moz-transition: all 0.8s ease, z-index 0.6s;
+  transition: all 0.8s ease, z-index 0.6s;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child {
+  cursor: default;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  -webkit-transform: translateZ(2px);
+  -moz-transform: translateZ(2px);
+  transform: translateZ(2px);
+}
+
+.hardcover_front li:last-child {
+  -webkit-transform: rotateY(180deg) translateZ(2px);
+  -moz-transform: rotateY(180deg) translateZ(2px);
+  transform: rotateY(180deg) translateZ(2px);
+}
+
+/* HARDCOVER back */
+.hardcover_back li:first-child {
+  -webkit-transform: translateZ(2px);
+  -moz-transform: translateZ(2px);
+  transform: translateZ(2px);
+}
+
+.hardcover_back li:last-child {
+  -webkit-transform: translateZ(-2px);
+  -moz-transform: translateZ(-2px);
+  transform: translateZ(-2px);
+}
+
+/* thickness of cover */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before,
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before,
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before,
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before,
+.book_spine li:first-child:after,
+.book_spine li:first-child:before,
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+/* HARDCOVER front */
+.hardcover_front li:first-child:after,
+.hardcover_front li:first-child:before {
+  width: 4px;
+  height: 100%;
+}
+
+.hardcover_front li:first-child:after {
+  -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.hardcover_front li:first-child:before {
+  -webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+  -moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+  transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_front li:last-child:after,
+.hardcover_front li:last-child:before {
+  width: 4px;
+  height: 160px;
+}
+
+.hardcover_front li:last-child:after {
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(-2px) translateY(-78px);
+}
+
+.hardcover_front li:last-child:before {
+  box-shadow: 0px 0px 30px 5px #333;
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(-2px) translateY(-78px);
+}
+
+/* thickness of cover */
+.hardcover_back li:first-child:after,
+.hardcover_back li:first-child:before {
+  width: 4px;
+  height: 100%;
+}
+
+.hardcover_back li:first-child:after {
+  -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.hardcover_back li:first-child:before {
+  -webkit-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+  -moz-transform: rotateY(90deg) translateZ(158px) translateX(2px);
+  transform: rotateY(90deg) translateZ(158px) translateX(2px);
+}
+
+.hardcover_back li:last-child:after,
+.hardcover_back li:last-child:before {
+  width: 4px;
+  height: 160px;
+}
+
+.hardcover_back li:last-child:after {
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(80px) translateX(2px) translateY(-78px);
+}
+
+.hardcover_back li:last-child:before {
+  box-shadow: 10px -1px 80px 20px #666;
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(-140px) translateX(2px) translateY(-78px);
+}
+
+/* BOOK SPINE */
+.book_spine {
+  -webkit-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+  -moz-transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+  transform: rotateY(60deg) translateX(-5px) translateZ(-12px);
+  width: 16px;
+  z-index: 0;
+}
+
+.book_spine li:first-child {
+  -webkit-transform: translateZ(2px);
+  -moz-transform: translateZ(2px);
+  transform: translateZ(2px);
+}
+
+.book_spine li:last-child {
+  -webkit-transform: translateZ(-2px);
+  -moz-transform: translateZ(-2px);
+  transform: translateZ(-2px);
+}
+
+/* thickness of book spine */
+.book_spine li:first-child:after,
+.book_spine li:first-child:before {
+  width: 4px;
+  height: 100%;
+}
+
+.book_spine li:first-child:after {
+  -webkit-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  -moz-transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+  transform: rotateY(90deg) translateZ(-2px) translateX(2px);
+}
+
+.book_spine li:first-child:before {
+  -webkit-transform: rotateY(-90deg) translateZ(-12px);
+  -moz-transform: rotateY(-90deg) translateZ(-12px);
+  transform: rotateY(-90deg) translateZ(-12px);
+}
+
+.book_spine li:last-child:after,
+.book_spine li:last-child:before {
+  width: 4px;
+  height: 16px;
+}
+
+.book_spine li:last-child:after {
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(8px) translateX(2px) translateY(-6px);
+}
+
+.book_spine li:last-child:before {
+  box-shadow: 5px -1px 100px 40px rgba(0, 0, 0, 0.2);
+  -webkit-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+  -moz-transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+  transform: rotateX(90deg) rotateZ(90deg) translateZ(-210px) translateX(2px) translateY(-6px);
+}
+
+.page,
+.page > li {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.page {
+  width: 100%;
+  height: 98%;
+  top: 1%;
+  left: 3%;
+  z-index: 10;
+}
+
+.page > li {
+  width: 100%;
+  height: 100%;
+  -webkit-transform-origin: left center;
+  -moz-transform-origin: left center;
+  transform-origin: left center;
+  -webkit-transition-property: transform;
+  -moz-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  transition-timing-function: ease;
+}
+
+.page > li:nth-child(1) {
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+
+.page > li:nth-child(2) {
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+
+.page > li:nth-child(3) {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
+.page > li:nth-child(4) {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+}
+
+.page > li:nth-child(5) {
+  -webkit-transition-duration: 0.6s;
+  -moz-transition-duration: 0.6s;
+  transition-duration: 0.6s;
+}
+
+/*
+	5. events
+*/
+.book:hover > .hardcover_front {
+  -webkit-transform: rotateY(-145deg) translateZ(0);
+  -moz-transform: rotateY(-145deg) translateZ(0);
+  transform: rotateY(-145deg) translateZ(0);
+  z-index: 0;
+}
+
+.book:hover > .page li:nth-child(1) {
+  -webkit-transform: rotateY(-30deg);
+  -moz-transform: rotateY(-30deg);
+  transform: rotateY(-30deg);
+  -webkit-transition-duration: 1.5s;
+  -moz-transition-duration: 1.5s;
+  transition-duration: 1.5s;
+}
+
+.book:hover > .page li:nth-child(2) {
+  -webkit-transform: rotateY(-35deg);
+  -moz-transform: rotateY(-35deg);
+  transform: rotateY(-35deg);
+  -webkit-transition-duration: 1.8s;
+  -moz-transition-duration: 1.8s;
+  transition-duration: 1.8s;
+}
+
+.book:hover > .page li:nth-child(3) {
+  -webkit-transform: rotateY(-118deg);
+  -moz-transform: rotateY(-118deg);
+  transform: rotateY(-118deg);
+  -webkit-transition-duration: 1.6s;
+  -moz-transition-duration: 1.6s;
+  transition-duration: 1.6s;
+}
+
+.book:hover > .page li:nth-child(4) {
+  -webkit-transform: rotateY(-130deg);
+  -moz-transform: rotateY(-130deg);
+  transform: rotateY(-130deg);
+  -webkit-transition-duration: 1.4s;
+  -moz-transition-duration: 1.4s;
+  transition-duration: 1.4s;
+}
+
+.book:hover > .page li:nth-child(5) {
+  -webkit-transform: rotateY(-140deg);
+  -moz-transform: rotateY(-140deg);
+  transform: rotateY(-140deg);
+  -webkit-transition-duration: 1.2s;
+  -moz-transition-duration: 1.2s;
+  transition-duration: 1.2s;
+}
+
+/*
+	6. Bonus
+*/
+/* cover CSS */
+.coverDesign {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.coverDesign::after {
+  background-image: -webkit-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+  background-image: -moz-linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, transparent 100%);
+  background-image: linear-gradient(-135deg, rgba(255, 255, 255, 0.45) 0%, rgba(0, 0, 0, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.coverDesign h1 {
+  color: #fff;
+  font-size: 2.2em;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin: 54% 0 0 0;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.coverDesign p {
+  color: #f8f8f8;
+  font-size: 1em;
+  text-align: center;
+  text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.1);
+}
+
+.yellow {
+  background-color: #f1c40f;
+  background-image: -webkit-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+  background-image: -moz-linear-gradient(top, #f1c40f 58%, #e7ba07 0%);
+  background-image: linear-gradient(to bottom, #f1c40f 58%, #e7ba07 0%);
+}
+
+.blue {
+  background-color: #3498db;
+  background-image: -webkit-linear-gradient(top, #3498db 58%, #2a90d4 0%);
+  background-image: -moz-linear-gradient(top, #3498db 58%, #2a90d4 0%);
+  background-image: linear-gradient(to bottom, #3498db 58%, #2a90d4 0%);
+}
+
+.grey {
+  background-color: #f8e9d1;
+  background-image: -webkit-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
+  background-image: -moz-linear-gradient(top, #f8e9d1 58%, #e7d5b7 0%);
+  background-image: linear-gradient(to bottom, #f8e9d1 58%, #e7d5b7 0%);
+}
+
+/* Basic ribbon */
+.ribbon {
+  color: #fff;
+  display: block;
+  font-size: 0.7em;
+  position: absolute;
+  top: 11px;
+  right: 1px;
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  letter-spacing: 0.15em;
+  text-align: center;
+  -webkit-transform: rotateZ(45deg) translateZ(1px);
+  -moz-transform: rotateZ(45deg) translateZ(1px);
+  transform: rotateZ(45deg) translateZ(1px);
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
+  z-index: 10;
+}
+.ribbon.new {
+  background: #63c930;
+}
+.ribbon.new:before, .ribbon.new:after {
+  border-bottom: 20px solid #63c930;
+}
+.ribbon.bestseller {
+  background: #c0392b;
+}
+.ribbon.bestseller:before, .ribbon.bestseller:after {
+  border-bottom: 20px solid #c0392b;
+}
+
+.ribbon::before,
+.ribbon::after {
+  position: absolute;
+  top: -20px;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+}
+
+.ribbon::before {
+  left: -20px;
+  border-left: 20px solid transparent;
+}
+
+.ribbon::after {
+  right: -20px;
+  border-right: 20px solid transparent;
+}
+
+/* figcaption */
+figcaption.ccc {
+  padding-left: 40px;
+  text-align: left;
+  position: absolute;
+  top: 0%;
+  left: 160px;
+  width: 310px;
+}
+
+figcaption.ccc h1 {
+  color:#fff;
+  margin: 0;
+}
+
+figcaption.ccc span {
+  color: #ffffff;
+  padding: 0.6em 0 1em 0;
+  display: block;
+}
+
+figcaption.ccc p {
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+/* Media Queries */
+@media screen and (max-width: 37.8125em) {
+  .align > li {
+    width: 100%;
+    min-height: 440px;
+    height: auto;
+    padding: 0;
+    margin: 0 0 30px 0;
+  }
+
+  .book {
+    margin: 0 auto;
+  }
+
+  figcaption.ccc{
+    text-align: center;
+    width: 320px;
+    top: 250px;
+    padding-left: 0;
+    left: -80px;
+    font-size: 90%;
+  }
+}
+
+
+
+
+
+
+
+
+
+.contact_us p {
+  color: white;
+}
+
+
+.footer p{
+  color: white;
+}
+
+
+.footer_link{
+  color: white !important;
+}
+
+
+
+.btn-square {
+ 
+    color: white;
+    border-color: white;
+}
+
+/* Add the hover effect for the buttons */
+.btn-square:hover {
+    background-color: white;
+    color: #ff6600; /* Set the color to the original outline color */
+    border-color: white; /* Set the color to the original outline color */
+}
+
+/* h6{
+  color: white ;
+} */
+h2{
+  color: #ff6600;
+    border-color: #fff;
+/*  
+    text-shadow: 1px 1px 1px #fff; */
+}
+
+ 
+
+/* .text-wrapper {
+  color:white !important;
+} */
+
+
+
+
+ 
+ 
+
+.Carousel_h5{
+  text-transform:uppercase;
+  font-size:95px;
+  font-family:'Verdana';
+  margin-left: -100px;
+  margin-right: -100px;
+}
+ 
+
+ /* Media Queries */
+@media screen and (min-width: 900px) {
+  .Carousel_h5{
+  text-transform:uppercase;
+  font-size:122px;
+  font-family:'Verdana';
+  padding:30px;
+}
+}
+                                           
+  .headerr {
+     
+   
+    font-weight:  900;
+    letter-spacing: 2px;
+   font-size: 28px;
+    color: #ffffff;
+    background-image: -webkit-linear-gradient(200deg, #ffffff, rgb(236, 228, 228));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 40s infinite linear;
+  }
+  
+  @-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
+  }
+  
+
+
+
+
+
+  .wrapperrrr {
+  max-width: 100%;
+  overflow: hidden;
+ 
+}
+
+.marquee {
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  animation: marquee 100s linear infinite;
+  
+}
+
+.marquee p {
+  display: inline-block;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+
+
+
+                                          </style>
+
+
+    
+</head>
+
+
+
+<body>
+
+
+    <!-- <ul class="c-shutter" style="--message: 'Join with your dream startup idea. Go back with a business ready for hyper-growth.'">
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+        <li class="c-shutter__slat"></li>
+       </ul> -->
+ 
+       
+       <!-- DEMO CONTROLS -->
+       <!-- <button style="display: none;" class="c-demo"></button> -->
+
+
+
+
+
+
+
+
+
+       
+<!-- 
+
+  <div id="opening-animation" class="space">
+ 
+  
+  
+   
+        <div class="wrapper">
+          <div class="counter" data-from="0" data-to="100"></div>
+          <div class="count-text"></div>
+         
+          <div class="progress-bar" data-from="0" data-to="100"></div>
+        </div>
+  
+  
+ 
+ <br>
+ <br>
+ <br>
+        <h1 id="str" class="text-white mb-5 animated slideInRight">Join with your dream startup idea.
+          <br>
+        </h1>
+ 
+        
+ 
+  </div> -->
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" role="status" style="width: 3rem; height: 3rem;"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark px-0">
+        <div class="row g-0 d-none d-lg-flex">
+            <div class="col-lg-6 ps-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center text-light">
+                    <span>Follow Us:</span>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-link text-light" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="col-lg-6 pe-5  text-end">
+                <div class="h-100  d-inline-flex align-items-center text-light py-2 px-4">
+                    <span class="me-2 fw-semi-bold"><i class="fa fa-phone-alt me-2"></i>Call Us:</span>
+                    <span>+012 345 6789</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+ <!-- Navbar Start -->
+ <nav style="background-color: #ff6600;" class="navbar navbar-expand-lg bg-white navbar-light   px-4 px-lg-5">
+    <a href="index.html" class="navbar-brand d-flex align-items-center">
+       
+            <img width="60px" src="img/wara_ventures_logo.png" alt="" srcset="">
+       
+    </a>
+    <button type="button" class="navbar-toggler me-0" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+            <a href="index.html" class="nav-item nav-link active">Home</a>
+            <a href="team.html" class="nav-item nav-link">People</a>
+            <a href="product.html" class="nav-item nav-link">Program</a>
+            <!-- <a href="about.html" class="nav-item nav-link">About</a> -->
+            <!-- <a href="service.html" class="nav-item nav-link">Services</a>
+            <a href="product.html" class="nav-item nav-link">Products</a> -->
+            <!-- <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="dropdown-menu bg-light m-0">
+                    <a href="gallery.html" class="dropdown-item">Gallery</a>
+                    <a href="feature.html" class="dropdown-item">Features</a>
+                    <a href="team.html" class="dropdown-item">Our Team</a>
+                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                    <a href="404.html" class="dropdown-item">404 Page</a>
+                </div>
+            </div> -->
+             
+        </div>
+        <div class="border-start ps-4 d-none d-lg-block">
+            <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+    </div>
+</nav>
+<!-- Navbar End -->
+
+
+    <!-- Carousel Start -->
+    <div class="container-fluid  px-0 mb-5" data-parallax="scroll" data-image-src="img/g8.jpg" style="height: 90vh;">
+        <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active p-5"  >
+                    <!-- <img class="w-100" src="img/carousel-1.jpg" alt="Image"> -->
+                    <!-- <div class="carousel-caption"> -->
+                        <div class="container">
+                            <div class="row justify-content-start ">
+                                <div class="col-lg-10 text-start " style="padding-top: 15vh;">
+                                    <!-- <p class="fs-6 text-white">We are a scalability-focused startup incubator that ignites explosive growth in your revenue
+                                        base through our WARA factor</p> -->
+                                    <!-- <h1   class="text-white mb-5 animated slideInRight ">We are a scalability-focused startup incubator that ignites explosive growth in your revenue
+                                        base through our  </h1> -->
+
+
+
+       
+
+                                        <h1 class="headerr">We are a scalability-focused startup incubator that ignites explosive growth in your revenue
+                                          base through our  </h1>
+
+
+                                        
+ 
+                                </div>
+                            </div>
+                        </div>
+                    <!-- </div> -->
+
+
+
+
+                    <div class="container-fluid col-lg-12 text-start">
+                                
+ 
+                      <h3 class="Carousel_h5" style="color: #fff;"> 
+                      
+                        <div class="wrapperrrr">
+                          <div class="marquee">
+                            <p>
+                              WARA  FACTOR  WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR WARA  FACTOR
+                            <p>
+                               
+                            </p>
+                          </div>
+                        </div>
+                      </h3>
+            
+                    </div>
+
+
+
+
+
+                    
+                </div>
+
+
+
+ 
+
+                
+  
+            </div>
+
+
+            
+    
+        </div>
+ 
+
+
+    </div>
+
+    
+    <!-- Carousel End -->
+
+
+ 
+
+
+ 
+
+
+    <!-- Banner Start -->
+    <div id="FACTOR" class="container-fluid banner my-5 py-5" data-parallax="scroll" data-image-src=" " style=" ">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-12 wow fadeIn" data-wow-delay="0.3s">
+                    <div class="row g-4 align-items-center" style=" ">
+                        <!-- <div class="col-sm-4">
+                            <img class="img-fluid rounded" src="img/banner-1.jpg" alt="">
+                        </div> -->
+                        <div class="col-sm-12">
+                            <!-- <h1 class="text-white mb-3">The Wara Factor </h1> -->
+
+                            <h1   class="  text-white mb-3   ml2">
+                                <span>The</span>
+                                <span>Wara</span>
+                                <span>Factor</span>
+                            </h1>
+
+
+
+
+
+
+
+    
+
+                            <div class="mx-auto pb-4 wow fadeInUp box" data-wow-delay="0.1s"  >
+<!--                                
+                                <h3 class="mb-5 text-white">Most startups fail for three reasons:
+                                      </h3> -->
+
+
+
+
+                                      
+                            <h4 class="ml9 mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s">
+                                <span class="mb-5 text-white">
+                                  <span class="letters">Most startups fail for three reasons:</span>
+                                </span>
+                              </h4>
+                              
+                          <br>
+ 
+
+
+                          <h2>
+
+                            <li class="text-white mx-auto pb-4 wow fadeInUp">
+                              Lacking people capability
+                          </li>     
+                          <li class="text-white mx-auto pb-4 wow fadeInUp">
+                              Business-model issues
+                          </li>    
+                          <li class="text-white mx-auto pb-4 wow fadeInUp">
+                              Inability to scale
+                          </li>  
+                          </h2>
+ 
+                      
+                      </div>
+                            <!-- <p class="text-white mb-4">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p> -->
+                            <!-- <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-sm-4">
+                            <img class="img-fluid rounded" src="img/banner-2.jpg" alt="">
+                        </div>
+                        <div class="col-sm-8">
+                            <h2 class="text-white mb-3">We Deliver Fresh Mild Worldwide</h2>
+                            <p class="text-white mb-4">Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+                            <a class="btn btn-secondary rounded-pill py-2 px-4" href="">Read More</a>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+        </div>
+    </div>
+    <!-- Banner End -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div id="FACTOR" class="container-fluid banner  "  data-parallax="scroll"   style="    ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+      
+
+
+    <!-- Service Start -->
+    <div class="container-xxl py-5" style="margin-top: -12vh;">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s"  >
+                <h2 class="ml1">
+                    <!-- <p class="  bg-white text-center text-primary px-3">That's where the WARA factor kicks in.</p> -->
+
+
+                    <span class="text-wrapper   text-center text-primary px-3">
+                        <span class="line line1"></span>
+                        <span class="letters">That's where the WARA factor kicks in.</span>
+                        <span class="line line2"></span>
+                      </span> 
+                </h2> 
+                
+            </div>
+            <div class="row gy-5 gx-4">
+                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp  box" data-wow-delay="0.1s">
+                    <div class="service-item d-flex h-100" >
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/banner.jpg" alt="">
+                        </div>
+                        <div class="service-text p-5 pt-0">
+                            <div class="service-icon">
+                                <img class="img-fluid rounded-circle" src="img/rsz_1g3.jpg" alt="">
+                            </div>
+
+                            <h5 class="ml8">
+                                <span class="letters-container">
+                                  <span class="letters letters-left">Unapologetically People-First</span>
+                                  
+                                </span>
+                                 
+                              </h5>
+
+
+                      
+                            
+                            <p class="mb-4">An upskilled founder is a winner business. Our zeroed in focus of training and mentoring founder ensures guaranteed win for all parties</p>
+                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp  box" data-wow-delay="0.3s">
+                    <div class="service-item d-flex h-100">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/banner.jpg" alt="">
+                        </div>
+                        <div class="service-text p-5 pt-0">
+                            <div class="service-icon">
+                                <img class="img-fluid rounded-circle" src="img/rsz_q.jpg" alt="">
+                            </div>
+                            <!-- <h5 class="mb-3">Unashamedly Marketing-driven</h5> -->
+
+                            
+                            <h5 class="ml8">
+                                <span class="letters-container box">
+                                  <span class="letters letters-left">Unashamedly Marketing-driven</span>
+                                  
+                                </span>
+                                 
+                              </h5>
+                            <p class="mb-4">Our consumer-first approach ensures founders come to us as product experts and go back as business-experts.</p>
+                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 pt-5 wow fadeInUp box" data-wow-delay="0.5s">
+                    <div class="service-item d-flex h-100">
+                        <div class="service-img">
+                            <img class="img-fluid" src="img/banner.jpg" alt="">
+                        </div>
+                        <div class="service-text p-5 pt-0">
+                            <div class="service-icon">
+                                <img class="img-fluid rounded-circle" src="img/rsz_1qq.jpg" alt="">
+                            </div>
+
+
+
+                                 
+                            <h5 class="ml8">
+                                <span class="letters-container">
+                                  <span class="letters letters-left">Unifying the best of both worlds</span>
+                                  
+                                </span>
+                                 
+                              </h5>
+
+
+
+                            <!-- <h5 class="mb-3">Unifying the best of both worlds</h5> -->
+                            <p class="mb-4">We combine traditional business expertise of generating high revenue with startup agility to make the startups more sustainably scalable.</p>
+                            <a class="btn btn-square rounded-circle" href=""><i class="bi bi-chevron-double-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+    <!-- Gallery Start -->
+    <!-- <div class="container-xxl py-5 px-0">
+        <div class="row g-0">
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-5.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-5.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-1.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-1.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-2.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-2.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-6.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-6.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-7.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-7.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-3.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-3.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                <div class="row g-0">
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-4.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-4.jpg" alt="">
+                        </a>
+                    </div>
+                    <div class="col-12">
+                        <a class="d-block" href="img/gallery-8.jpg" data-lightbox="gallery">
+                            <img class="img-fluid" src="img/gallery-8.jpg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Gallery End -->
+
+
+    <!-- Product Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">Our Products</p>
+                <h1 class="mb-5">Our Dairy Products For Healthy Living</h1>
+            </div>
+            <div class="row gx-4">
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Pure Milk</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-2.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Fresh Meat</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-3.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Dairy Products</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-4.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Organic Food</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Product End -->
+
+
+    <!-- Team Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h2>
+                    <p class="  bg-white text-center text-primary px-3">Our Team</p>
+                </h2>
+               
+                <p class="mb-5">Experienced Team Members</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item rounded p-4">
+                        <img class="img-fluid rounded mb-4" src="img/team-1.jpg" alt="">
+                        <h5>Adam Crew</h5>
+                        <p class="text-primary">Founder</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item rounded p-4">
+                        <img class="img-fluid rounded mb-4" src="img/team-2.jpg" alt="">
+                        <h5>Doris Jordan</h5>
+                        <p class="text-primary">Veterinarian</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded p-4">
+                        <img class="img-fluid rounded mb-4" src="img/team-3.jpg" alt="">
+                        <h5>Jack Dawson</h5>
+                        <p class="text-primary">Farmer</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item rounded p-4">
+                        <img class="img-fluid rounded mb-4" src="img/team-3.jpg" alt="">
+                        <h5>Jack Dawson</h5>
+                        <p class="text-primary">Farmer</p>
+                        <div class="d-flex justify-content-center">
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-square btn-outline-secondary rounded-circle mx-1" href=""><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Team End -->
+
+
+    <!-- Testimonial Start -->
+    <!-- <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <p class="section-title bg-white text-center text-primary px-3">Testimonial</p>
+                <h1 class="mb-5">What People Say About Our Dairy Farm</h1>
+            </div>
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="testimonial-img">
+                        <img class="img-fluid animated pulse infinite" src="img/testimonial-1.jpg" alt="">
+                        <img class="img-fluid animated pulse infinite" src="img/testimonial-2.jpg" alt="">
+                        <img class="img-fluid animated pulse infinite" src="img/testimonial-3.jpg" alt="">
+                        <img class="img-fluid animated pulse infinite" src="img/testimonial-4.jpg" alt="">
+                    </div>
+                </div>
+                <div class="col-lg-7 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="owl-carousel testimonial-carousel">
+                        <div class="testimonial-item">
+                            <img class="img-fluid mb-3" src="img/testimonial-1.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h5>Client Name</h5>
+                            <span class="text-primary">Profession</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <img class="img-fluid mb-3" src="img/testimonial-2.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h5>Client Name</h5>
+                            <span class="text-primary">Profession</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <img class="img-fluid mb-3" src="img/testimonial-3.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h5>Client Name</h5>
+                            <span class="text-primary">Profession</span>
+                        </div>
+                        <div class="testimonial-item">
+                            <img class="img-fluid mb-3" src="img/testimonial-4.jpg" alt="">
+                            <p class="fs-5">Dolores sed duo clita tempor justo dolor et stet lorem kasd labore dolore lorem ipsum. At lorem lorem magna ut et, nonumy et labore et tempor diam tempor erat.</p>
+                            <h5>Client Name</h5>
+                            <span class="text-primary">Profession</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> -->
+    <!-- Testimonial End -->
+
+
+
+
+      <!-- Product Start -->
+      <div class="container-xxl py-5">
+        <div class="container">
+            <!-- <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+                <h2>
+                    <p class="  bg-white text-center text-primary px-3">Services</p>
+                </h2>
+
+                
+                 
+                <p class="mb-5">Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+            </div> -->
+
+
+
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s"  >
+              <h2 class="ml1">
+                  <!-- <p class="  bg-white text-center text-primary px-3">That's where the WARA factor kicks in.</p> -->
+
+
+                  <span class="text-wrapper   text-center text-primary px-3">
+                      <span class="line line"></span>
+                      <span class="letters">Services</span>
+                      <span class="line line2"></span>
+                    </span> 
+              </h2> 
+
+              
+              
+          </div>
+
+
+
+
+
+
+        
+
+           
+            <div class="row gx-4">
+                <div class="col-md-6 col-lg-4 col-xl- wow fadeInUp box" data-wow-delay="0.1s">
+                    <!-- <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="">
+                            <div class="product-overlay">
+                                <h1>
+                                    <a class=" " href="">Bootcamp</a>
+                                </h1> 
+                                
+                                
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Bootcamp</a>
+                            <span class="text-primary me-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, ullam.</span>
+                        </div>
+                    </div> -->
+
+
+
+
+                    <figure class="image-block">
+                        
+                        <!-- <h1> Founder Training</h1> -->
+
+                        <h1 class="ml5">
+                          <span class="text-wrapper">
+                            <span class="line line1"></span>
+                            <span class="letters letters-left">Founder</span>
+                            <!-- <span class="letters ampersand">&amp;</span> -->
+                            <span class="letters letters-right">Training</span>
+                            <span class="line line2"></span>
+                          </span>
+                        </h1>
+
+                        
+                        <img src="img/g5.jpg" alt="" />
+                        <figcaption>
+                            <h3>
+                                Founder Training
+                            </h3>
+                            <p>Our business strategy and GTM focused 8-week bootcamp using our proprietary model will
+                                ensure a strong capability lift for all startups.</p>
+                            <button>
+                                More Info
+                            </button>
+                        </figcaption>
+                    </figure>
+                </div>
+
+
+
+                    
+
+                <div class="col-md-6 col-lg-4 col-xl- wow fadeInUp box" data-wow-delay="0.1s">
+                    <!-- <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="">
+                            <div class="product-overlay">
+                                <h1>
+                                    <a class=" " href="">Mentoring</a>
+                                </h1> 
+                                
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Mentoring</a>
+                            <span class="text-primary me-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, ullam.</span>
+                        </div>
+                    </div> -->
+
+                    <figure class="image-block">
+                        <!-- <h1>Scale Support</h1> -->
+
+
+                        <h1 class="ml5">
+                          <span class="text-wrapper">
+                            <span class="line4 line4"></span>
+                            <span class="letters letters-left">Scale</span>
+                            <!-- <span class="letters ampersand">&amp;</span> -->
+                            <span class="letters letters-right">Support</span>
+                            <span class="line4 line4"></span>
+                          </span>
+                        </h1>
+
+
+                        
+                        <img src="img/g7.jpg" alt="" />
+                        <figcaption>
+                            <h3>
+                                Scale Support
+                            </h3>
+                            <p>Our one-to-one development session with worldwide mentor network customized for each
+                                startup will turbocharge you for a revenue jump.</p>
+                            <button>
+                                More Info
+                            </button>
+                        </figcaption>
+                    </figure>
+                    
+                </div>
+
+
+                <div class="col-md-6 col-lg-4 col-xl- wow fadeInUp box" data-wow-delay="0.1s">
+                    <!-- <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-1.jpg" alt="">
+                            <div class="product-overlay">
+                                <h1>
+                                    <a class=" " href="">Courses</a>
+                                </h1> 
+                                
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Courses</a>
+                            <span class="text-primary me-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, ullam.</span>
+                        </div>
+                    </div> -->
+
+
+
+
+
+                    <figure class="image-block ">
+                        <!-- <h1> Access To Capital</h1> -->
+
+
+
+
+                        
+                        <h1 class="ml5">
+                          <span class="text-wrapper">
+                            <span class="line6 line6"></span>
+                            <span class="letters letters-left">Access</span>
+                            <span class="letters  letters-left">To</span>
+                            <span class="letters letters-right">Capital</span>
+                            <span class="line6 line6"></span>
+                          </span>
+                        </h1>
+
+
+
+
+                        <img src="img/g8.jpg" alt="" />
+                        <figcaption>
+                            <h3>
+                                Access To Capital
+                            </h3>
+                            <p>Our North America, Middle East & South East Asia-focused engagement platform will connect
+                                you with the right investors, advisors and partners network.</p>
+                            <button>
+                                More Info
+                            </button>
+                        </figcaption>
+                    </figure>
+                </div>
+                <!-- <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-2.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Fresh Meat</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-3.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Dairy Products</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.7s">
+                    <div class="product-item">
+                        <div class="position-relative">
+                            <img class="img-fluid" src="img/product-4.jpg" alt="">
+                            <div class="product-overlay">
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-link"></i></a>
+                                <a class="btn btn-square btn-secondary rounded-circle m-1" href=""><i class="bi bi-cart"></i></a>
+                            </div>
+                        </div>
+                        <div class="text-center p-4">
+                            <a class="d-block h5" href="">Organic Food</a>
+                            <span class="text-primary me-1">$19.00</span>
+                            <span class="text-decoration-line-through">$29.00</span>
+                        </div>
+                    </div>
+                </div> -->
+            </div>
+
+
+        
+        </div>
+    </div>
+    <!-- Product End -->
+
+
+
+
+
+     <!-- Service Start -->
+     <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto pb-4 wow fadeInUp" data-wow-delay="0.1s"  >
+             
+
+
+                <h2 class="ml1" style="margin-bottom: -100px;">
+                  <!-- <p class="  bg-white text-center text-primary px-3">That's where the WARA factor kicks in.</p> -->
+
+
+                  <span class="text-wrapper   text-center text-primary px-3">
+                      <span class="line line1"></span>
+                      <span class="letters">Business Strategy Resources</span>
+                      <span class="line line2"></span>
+                    </span> 
+              </h2> 
+
+
+                
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="component">
+    <ul class="align">
+      <!-- Book 1 -->
+      <li class="box">
+        <figure class='book'>        
+          <!-- Front -->        
+          <ul class='hardcover_front'>
+            <li>
+              <img src="https://s.cdpn.io/13060/book1.jpg" alt="" width="100%" height="100%">
+              <!-- <span class="ribbon bestseller">Nº1</span> -->
+            </li>
+            <li></li>
+          </ul>        
+          <!-- Pages -->        
+          <ul class='page'>
+            <li></li>
+            <li>
+              <a class="btnn" href="https://shahriaramin.net/blog/">Get It Free</a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>        
+          <!-- Back -->        
+          <ul class='hardcover_back'>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class='book_spine'>
+            <li></li>
+            <li></li>
+          </ul>
+          <figcaption class="ccc">
+            <h1>Responsive Web Design</h1>
+            <span>By Ethan Marcotte</span>
+            <p>From mobile browsers to netbooks and tablets, users are visiting your sites from an increasing array of devices and browsers. Are your designs ready?...</p>
+          </figcaption>
+        </figure>
+      </li>  
+      <!-- Book 2 -->
+      <li class="box">
+        <figure class='book'>        
+          <!-- Front -->        
+          <ul class='hardcover_front'>
+            <li>
+              <img src="https://s.cdpn.io/13060/book2.jpg" alt="" width="100%" height="100%">
+              <!-- <span class="ribbon new">NEW</span> -->
+            </li>
+            <li></li>
+          </ul>        
+          <!-- Pages -->        
+          <ul class='page'>
+            <li></li>
+            <li>
+              <a class="btnn" href="https://shahriaramin.net/blog/">Get It Free</a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>        
+          <!-- Back -->        
+          <ul class='hardcover_back'>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class='book_spine'>
+            <li></li>
+            <li></li>
+          </ul>
+          <figcaption class="ccc">
+            <h1>Mobile First</h1>
+            <span>By Luke Wroblewski</span>
+            <p>Our industry’s long wait for the complete, strategic guide to mobile web design is finally over. Former Yahoo! design architect and co-creator of Bagcheck Luke Wroblewski knows more about mobile experience than the rest of us...</p>
+          </figcaption>
+        </figure>
+      </li>  
+      <!-- Book 3 -->
+      <li class="box">
+        <figure class='book'>       
+          <!-- Front -->        
+          <ul class='hardcover_front'>
+            <li>
+              <img src="https://s.cdpn.io/13060/book3.jpg" alt="" width="100%" height="100%">
+            </li>
+            <li></li>
+          </ul>        
+          <!-- Pages -->        
+          <ul class='page'>
+            <li></li>
+            <li>
+              <a class="btnn" href="https://shahriaramin.net/blog/">Get It Free</a>
+            </li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>        
+          <!-- Back -->        
+          <ul class='hardcover_back'>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul class='book_spine'>
+            <li></li>
+            <li></li>
+          </ul>
+          <figcaption class="ccc">
+            <h1>Adaptive Web Desgn</h1>
+            <span>By Aaron Gustafson</span>
+            <p>The web is an ever-changing medium whose scope, application, audience and platform continue to grow on a daily basis. If you’ve worked on the web for any amount of time, you’ve likely heard or even used the term “progressive enhancement.”...</p>
+          </figcaption>
+        </figure>
+      </li>
+    </ul>  
+  </div>
+
+
+            
+           
+        </div>
+    </div>
+    <!-- Service End -->
+
+
+
+
+
+ <!-- Contact Start -->
+ <div class="container-xxl py-5">
+  <div class="container contact_us">
+      <div class="text-center mx-auto wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+          <!-- <p class="section-title bg-white text-center text-primary px-3">Contact Us</p> -->
+          <!-- <h1 class="mb-5">If You Have Any Query, Please Contact Us</h1> -->
+
+          <h2 class="ml1">
+            <!-- <p class="  bg-white text-center text-primary px-3">That's where the WARA factor kicks in.</p> -->
+
+
+            <span class="text-wrapper   text-center text-primary px-3">
+                <span class="line line1"></span>
+                <span class="letters"> Contact Us</span>
+                <span class="line line2"></span>
+              </span> 
+        </h2> 
+
+
+ 
+
+
+      </div>
+      <br>
+       
+
+      <div class="row g-5">
+
+
+
+
+          <div class="col-lg-6 wow fadeInUp    box" data-wow-delay="0.1s">
+              <!-- <h3 class="mb-4"> If You Have Any Query, Please Contact Us
+              </h3> -->
+
+
+              <h4 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">If You Have Any Query , Please Contact Us</span>
+                </span>
+              </h4>
+ 
+              <p class="mb-4"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro unde sit distinctio quibusdam eligendi aliquid similique assumenda ad ipsum eaque!</a>.</p>
+              <form>
+                  <div class="row g-3">
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="name" placeholder="Your Name">
+                              <label for="name">Your Name</label>
+                          </div>
+                      </div>
+                      <div class="col-md-6">
+                          <div class="form-floating">
+                              <input type="email" class="form-control" id="email" placeholder="Your Email">
+                              <label for="email">Your Email</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-floating">
+                              <input type="text" class="form-control" id="subject" placeholder="Subject">
+                              <label for="subject">Subject</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <div class="form-floating">
+                              <textarea class="form-control" placeholder="Leave a message here" id="message" style="height: 250px"></textarea>
+                              <label for="message">Message</label>
+                          </div>
+                      </div>
+                      <div class="col-12">
+                          <button class="btn btn-outline-primary text-wrapper rounded rounded-pill py-2 px-4 animated slideInLeft" type="submit">Send Message</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+
+
+
+
+          <div class="col-lg-6 wow fadeInUp  box" data-wow-delay="0.5s">
+             
+
+
+              
+              <h4 class="ml11">
+                <span class="text-wrapper">
+                  <span class="line line1"></span>
+                  <span class="letters">Contact Details</span>
+                </span>
+              </h4>
+              <div class="d-flex border-bottom pb-3 mb-3 ">
+                  <div class="flex-shrink-0 btn-square   rounded-circle ">
+                      <i class="fa fa-map-marker-alt   "></i>
+                  </div>
+                  <div class="ms-3">
+                      <h6>Our Office</h6>
+                      <span class="footer_link">123 Street, New York, USA</span>
+                  </div>
+              </div>
+              <div class="d-flex border-bottom pb-3 mb-3">
+                  <div class="flex-shrink-0 btn-square   rounded-circle">
+                      <i class="fa fa-phone-alt  "></i>
+                  </div>
+                  <div class="ms-3">
+                      <h6>Call Us</h6>
+                      <span class="footer_link">+012 345 67890</span>
+                  </div>
+              </div>
+              <div class="d-flex border-bottom-0 pb-3 mb-3">
+                  <div class="flex-shrink-0 btn-square   rounded-circle">
+                      <i class="fa fa-envelope  "></i>
+                  </div>
+                  <div class="ms-3">
+                      <h6>Mail Us</h6>
+                      <span class="footer_link">info@example.com</span>
+                  </div>
+              </div>
+
+              <!-- <iframe class="w-100 rounded"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+              frameborder="0" style="min-height: 300px; border:0;" allowfullscreen="" aria-hidden="false"
+              tabindex="0"></iframe> -->
+          </div>
+
+
+
+
+
+      </div>
+  </div>
+</div>
+
+
+<!-- Contact End -->
+
+ 
+
+</div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark footer mt-5 py-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Our Office</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                    <div class="d-flex pt-3">
+                        <a class="btn btn-square   btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-secondary rounded-circle me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Our Office</h5>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
+                    <p class="mb-2"><i class="fa fa-envelope me-3"></i>info@example.com</p>
+                  
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link footer_link" href="">About Us</a>
+                    <a class="btn btn-link footer_link" href="">Contact Us</a>
+                    <a class="btn btn-link footer_link " href="">Our Services</a>
+                    <a class="btn btn-link footer_link" href="">Terms & Condition</a>
+                    <a class="btn btn-link footer_link" href="">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Business Hours</h5>
+                    <p class="mb-1">Monday - Friday</p>
+                    <h6 class="text-light">09:00 am - 07:00 pm</h6>
+                    <p class="mb-1">Saturday</p>
+                    <h6 class="text-light">09:00 am - 12:00 pm</h6>
+                    <p class="mb-1">Sunday</p>
+                    <h6 class="text-light">Closed</h6>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                    <div class="position-relative w-100">
+                        <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-secondary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div> -->
+            </div>
+             <div class="row ">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 footer_link">
+                    &copy; <a class="fw-semi-bold text-secondary footer_link" href="#">Your Site Name</a>, All Right Reserved.
+                </div>
+                <div class="col-md-6 text-center text-md-end footer_link">
+                    <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+                    Designed By <a class="fw-semi-bold text-secondary footer_link" href="https://www.lietoeye.com/">LTE</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Copyright Start -->
+    <!-- <div class="container-fluid bg-primary text-body copyright py-4">
+        <div class="container">
+            
+        </div>
+    </div> -->
+    <!-- Copyright End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+  
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+    
+<script>
+    let CLASS = {
+ ROOT: 'c-shutter',
+ OPENED: 'c-shutter--opened',
+ OPENING: 'c-shutter--opening',
+ CLOSED: 'c-shutter--closed',
+ CLOSING: 'c-shutter--closing',
+ ITEMS: 'c-shutter__slat'
+}
+
+class Shutter {
+ constructor(dom) {
+  this.state = false;
+  this.container = dom;
+ }
+ 
+ open(){
+  this.state = true;
+  this.toggle(true);
+ }
+ close(){
+  this.state = false;
+  this.toggle(false);
+ }
+ 
+ toggle(visibility){
+  this.container.classList.toggle(CLASS.OPENING, visibility);
+  this.container.classList.toggle(CLASS.CLOSING, !visibility);
+  
+  setTimeout(() => {
+   this.container.classList.remove(CLASS.OPENING);
+   this.container.classList.remove(CLASS.CLOSING);
+   this.container.classList.toggle(CLASS.OPENED, visibility);
+   this.container.classList.toggle(CLASS.CLOSED, !visibility);
+  }, 1999)
+ }
+ 
+ getState(){
+  return this.state;
+ }
+}
+
+const $shutter = document.querySelector('.c-shutter');
+
+let shutter = new Shutter($shutter);
+
+// Demo controls
+let demoBtn = document.querySelector('.c-demo');
+
+demoBtn.addEventListener('click', () => {
+ shutter.getState() ? shutter.close() : shutter.open();
+})
+
+// Force demo click
+
+var click = function (elem) {
+	var evt = new MouseEvent('click', {
+		bubbles: true,
+		cancelable: true,
+		view: window
+	});
+	elem.dispatchEvent(evt);
+};
+
+demoBtn.disabled = true;
+
+setTimeout(() => {
+ demoBtn.disabled = false;
+ click(demoBtn);
+
+}, 2000);
+</script>
+
+
+
+<script>
+    var string = "Go back with a business ready for hyper-growth.";
+var str = string.split("");
+var el = document.getElementById('str');
+(function animate() {
+str.length > 0 ? el.innerHTML += str.shift() : clearTimeout(running); 
+var running = setTimeout(animate, 90);
+})();
+</script>
+
+
+<script>
+
+let counter = 0;
+    setInterval(function() {
+        let all_spans = document.querySelectorAll("span");
+        all_spans.forEach((item, index) => {
+            counter === index ? item.classList.add("active") : item.classList.remove("active")
+        });
+        counter === 3 ? counter = 0 : counter++;
+    }, 1000)
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+
+
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: (el, i) => 70*i
+  }).add({
+    targets: '.ml2',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml1 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml1 .letter',
+    scale: [0.3,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 600,
+    delay: (el, i) => 70 * (i+1)
+  }).add({
+    targets: '.ml1 .line',
+    scaleX: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700,
+    offset: '-=875',
+    delay: (el, i, l) => 80 * (l - i)
+  }).add({
+    targets: '.ml1',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+<script>
+    // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml9 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml9 .letter',
+    scale: [0, 1],
+    duration: 1500,
+    elasticity: 600,
+    delay: (el, i) => 45 * (i+1)
+  }).add({
+    targets: '.ml9',
+    opacity: 1,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+
+<script>
+    anime.timeline({loop: true})
+  .add({
+    targets: '.ml8 .circle-white',
+    scale: [0, 3],
+    opacity: [1, 0],
+    easing: "easeInOutExpo",
+    rotateZ: 360,
+    duration: 1100
+  }).add({
+    targets: '.ml8 .circle-container',
+    scale: [0, 1],
+    duration: 1100,
+    easing: "easeInOutExpo",
+    offset: '-=1000'
+  }).add({
+    targets: '.ml8 .circle-dark',
+    scale: [0, 1],
+    duration: 1100,
+    easing: "easeOutExpo",
+    offset: '-=600'
+  }).add({
+    targets: '.ml8 .letters-left',
+    scale: [0, 1],
+    duration: 1200,
+    offset: '-=550'
+  }).add({
+    targets: '.ml8 .bang',
+    scale: [0, 1],
+    rotateZ: [45, 15],
+    duration: 1200,
+    offset: '-=1000'
+  }).add({
+    targets: '.ml8',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1400
+  });
+
+anime({
+  targets: '.ml8 .circle-dark-dashed',
+  rotateZ: 360,
+  duration: 8000,
+  easing: "linear",
+  loop: true
+});
+</script>
+
+
+
+
+<script>
+  anime.timeline({loop: true})
+  .add({
+    targets: '.ml5 .line',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 700 
+  }).add({
+    targets: '.ml5 .line',
+    duration: 200,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  })
+  .add({
+    targets: '.ml5 .line4',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 100 
+  }).add({
+    targets: '.ml5 .line4',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  })
+  .add({
+    targets: '.ml5 .line6',
+    opacity: [0.5,1],
+    scaleX: [0, 1],
+    easing: "easeInOutExpo",
+    duration: 100 
+  }).add({
+    targets: '.ml5 .line6',
+    duration: 600,
+    easing: "easeOutExpo",
+    translateY: (el, i) => (-0.625 + 0.625*2*i) + "em"
+  }).add({
+    targets: '.ml5 .ampersand',
+    opacity: [0,1],
+    scaleY: [0.5, 1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5 .letters-left',
+    opacity: [0,1],
+    translateX: ["0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=300'
+  }).add({
+    targets: '.ml5 .letters-right',
+    opacity: [0,1],
+    translateX: ["-0.5em", 0],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=600'
+  }).add({
+    targets: '.ml5',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 5000
+  });
+</script>
+
+
+<script>
+  // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml11 .letters');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.ml11 .line',
+    scaleY: [0,1],
+    opacity: [0.5,1],
+    easing: "easeOutExpo",
+    duration: 700
+  })
+  .add({
+    targets: '.ml11 .line',
+    translateX: [0, document.querySelector('.ml11 .letters').getBoundingClientRect().width + 100],
+    easing: "easeOutExpo",
+    duration: 700,
+    delay: 100
+  }).add({
+    targets: '.ml11 .letter',
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 600,
+    offset: '-=775',
+    delay: (el, i) => 34 * (i+1)
+  }).add({
+    targets: '.ml11',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+</script>
+
+
+<script>
+  const box = document.querySelectorAll('.box');
+
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes();
+
+function checkBoxes() {
+const triggerBottom = window.innerHeight / 5 * 4;
+
+box.forEach(box => {
+const boxTop = box.getBoundingClientRect().top;
+
+if(boxTop < triggerBottom) {
+  box.classList.add('show');
+} else {
+  box.classList.remove('show');
+}
+})
+}
+</script>
+
+
+
+<!-- 
+opening animation -->
+
+<!-- <script>
+ $(document).on('click', () => {
+                $('#opening-animation').fadeOut(2000);
+                $(document).off('click');
+            });
+            setTimeout(() => $('#opening-animation').remove(), 5000);
+</script>
+
+
+<script>
+ 
+
+$(function(){
+$('.repeat').click(function(){
+var classes =  $(this).parent().attr('class');
+$(this).parent().attr('class', 'animate_opening_page');
+var indicator = $(this);
+setTimeout(function(){ 
+$(indicator).parent().addClass(classes);
+}, 20);
+});
+});
+</script> 
+
+
+ 
+<script>
+ 
+function disableScroll(event) {
+ 
+  event.preventDefault();
+}
+
+ 
+document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('wheel', disableScroll, { passive: false });
+  document.addEventListener('touchmove', disableScroll, { passive: false });
+});
+
+ 
+function enableScroll() {
+  document.removeEventListener('wheel', disableScroll, { passive: false });
+  document.removeEventListener('touchmove', disableScroll, { passive: false });
+}
+ 
+setTimeout(enableScroll, 5000); 
+
+</script> -->
+
+ 
+<script>
+ 
+  window.onload = function() {
+      window.scrollTo(0, 0);
+  };
+</script>
+
+
+<!-- oening page count animation -->
+<script>
+  function countUp() {
+  var countEl = document.querySelector('.counter');
+  var countBar = document.querySelector('.progress-bar');
+  var countText = document.querySelector('.count-text');
+  countText.innerHTML = 'Please Wait...'
+  var x = 0;
+  var y = countEl.dataset.to;
+  var z = countBar.dataset.to;
+  
+  function addNum() {
+    countEl.innerHTML = x;
+    countBar.style.height = x + 'vh';
+    x += 1;
+    if (x > y && x > z) {
+      clearInterval(timer);
+      countText.innerHTML = 'You Are Good To Go';
+      toggleBtn.classList.remove('hidden');
+    }
+  }
+  
+  var timer = window.setInterval(addNum, 40);
+  var toggleBtn = document.querySelector('.repeat-btn');
+  toggleBtn.addEventListener('click', function(){
+    countUp();
+    toggleBtn.classList.add('hidden');
+  });
+}
+countUp();
+</script>
+
+
+<!-- <script>
+  jQuery(document).ready(function(){
+   $('h3').mousemove(function(e){
+     var rXP = (e.pageX - this.offsetLeft-$(this).width()/2);
+     var rYP = (e.pageY - this.offsetTop-$(this).height()/2);
+     $('h3').css('text-shadow', +rYP/10+'px  '+rXP/80+'px rgba(227,6,19,.8), '+rYP/8+'px  '+rXP/60+'px   , '+rXP/70+'px  '+rYP/12+'px   ');
+   });
+});
+
+</script> -->
+ 
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</body>
+
+</html>
